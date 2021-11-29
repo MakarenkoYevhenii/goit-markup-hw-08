@@ -334,6 +334,15 @@ li,
   }
 }
 
+@media (min-width: 1280px) {
+  .header__list-contacts {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .hero {
   display: block;
   padding-top: 200px;
