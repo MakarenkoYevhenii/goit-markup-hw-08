@@ -382,6 +382,12 @@ li,
   letter-spacing: 0.06em;
 }
 
+.container-flex-hero {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 696px;
+}
+
 .section-benefits {
   padding-top: 0px;
 }
