@@ -1,12 +1,18 @@
+@import 'utils/variables';
+@import 'utils/mixins';
 
-@import 'components/_basement';
-@import 'components/_benefits';
-@import 'components/_cutomers';
+@import 'base/global';
+@import 'components/container';
+
 @import 'components/header';
-@import 'components/_hero';
-@import 'components/_listedge';
-@import 'components/modal';
-@import 'components/portfolio';
+@import 'components/hero';
+@import 'components/benefits';
+@import 'components/cutomers';
+@import 'components/listedge';
 @import 'components/team';
-@import 'utils/_variables';
-@import 'components/_global';
+
+@import 'components/portfolio';
+
+@import 'components/basement';
+@import 'components/modal';
+@import 'components/modal-menu';

@@ -46,7 +46,13 @@
 &:focus
 {
   fill: var(--bluecolor);
-}}
+}
+&-menu
+{
+ background-color: transparent;
+ border: none;
+}
+}
 .modaldiv
 {
   padding: 40px; 
@@ -67,7 +73,7 @@
 }
 .label,.labelcomments
 {
-font-family: 'Roboto';
+font-family: var(--fontbase);
 font-size: 12px;
 font-style: normal;
 font-weight: 400;
@@ -151,7 +157,7 @@ color: var(--colortextform);
 }
 .contract--label
 {
-font-family: 'Roboto';
+font-family: var(--fontbase);
 font-style: normal;
 font-weight: normal;
 font-size: 14px;
@@ -162,7 +168,7 @@ display: flex;
 }
 .text-contract
 {
-font-family: 'Roboto';
+font-family: var(--fontbase);
 font-style: normal;
 font-weight: normal;
 font-size: 14px;

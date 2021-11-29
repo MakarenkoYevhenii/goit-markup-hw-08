@@ -14,7 +14,7 @@
   }
   .emblema-basment {
     font-weight: bold;
-    font-family: "Raleway";
+    font-family: var(--fontsecondary);
     text-decoration: none;
     color: var(--whitetext);
     font-size: 26px;
@@ -63,7 +63,7 @@ align-items: baseline;
 {
 
   color: var(--whitetext);
-  font-family: "Roboto";
+  font-family: var(--fontbase);
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -104,7 +104,7 @@ align-items: baseline;
 }
 .subscribep
 {
-font-family: "Roboto";
+font-family: var(--fontbase);
 font-style: normal;
 font-weight: bold;
 font-size: 14px;
@@ -133,7 +133,7 @@ padding-left: 16px;
 
 &::placeholder
 {
-  font-family: "Roboto";
+  font-family: var(--fontbase);
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
