@@ -137,5 +137,6 @@
   @include mq(desktop)
   {
     flex-direction: row;
+    align-items: center;
   }
 }
