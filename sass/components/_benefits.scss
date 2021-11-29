@@ -49,3 +49,9 @@ color: var(--whitetext);
   position: relative;
   z-index: 1;
 }
+.container-benefits
+{
+  display: none;
+  @include mq(desktop){
+  display:block;}
+}
