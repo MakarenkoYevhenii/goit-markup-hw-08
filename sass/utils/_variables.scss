@@ -1,0 +1,50 @@
+:root {
+    --maincolor: rgb(33, 33, 33);
+    --bluecolor: rgba(33, 150, 243, 1);
+    --silvercolorcontacts: #757575;
+    --rockcolor: rgb(47, 48, 58);
+    --whitecolor: rgba(245, 244, 250);
+    --whitetext: rgba(255, 255, 255, 1);
+    --whitesix: rgba(255, 255, 255, 0.6);
+    --colortextform:rgba(117, 117, 117, 1);
+    --colorofborders: rgba(238, 238, 238, 1);
+    --colorofborderteam: #ffffff;
+    --bckgrclteam: rgba(245, 244, 250, 1);
+    --bckgrclteamitem: rgba(255, 255, 255, 1);
+    --headerline: rgba(236, 236, 236, 1);
+    --socialitemhover: rgb(33, 150, 243);
+    --colorlogoitem: #fff;
+    --bckglisteage: rgb(245, 244, 250);
+    --bordedclients:rgba(175, 177, 184, 1);
+    --bordersubscribe:rgba(255, 255, 255, 0.3);
+    --bcgsubscribe:#2F303A;
+    --bordercclientshover:rgba(33, 150, 243, 1);
+    --bordermodalblack: rgba(33, 33, 33, 0.2);
+    --colorsocialbg:rgba(255, 255, 255,0.1 );
+    --colorbggradient:rgba(47, 48, 58, 0.4);
+    --colorparagraphhero:rgba(117, 117, 117, 1);
+    --coloriconmain:#AFB1B8;
+    --overlaybcg:rgba(33, 150, 243, 0.9);
+    --bckgrwhbenefits:rgba(47, 48, 58, 0.8);
+    --borderclose:rgba(0, 0, 0, 0.1);
+    --bckgrmodal:rgba(0, 0, 0, 0.2);
+    --bordermodal:rgb(33, 150, 243);
+    --bcgcolorsend: rgb(24, 140, 232);
+    --colorplaceholder:rgba(117, 117, 117, 0.502);
+    --hoverbutton:rgba(24, 140, 232, 1);
+    /* shadowvolor */
+    --shadow1:rgba(0, 0, 0, 0.1);
+    --shadow2:rgba(0, 0, 0, 0.08);
+    --shadow3:rgba(0, 0, 0, 0.12);
+    --shadow4:rgba(0, 0, 0, 0.14);
+    --shadow5:rgba(0, 0, 0, 0.2);
+    --shadow6: rgba(0, 0, 0, 0.06);
+    --shadow7: rgba(0, 0, 0, 0.16);
+    --shadow8:rgba(0, 0, 0, 0.15);
+    /* grid setup */
+    --item: 2;
+    --item2: 2;
+    --indent: 30px;
+    /*animation setting*/
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }

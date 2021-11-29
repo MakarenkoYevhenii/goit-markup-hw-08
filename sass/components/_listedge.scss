@@ -1,0 +1,45 @@
+.listedge 
+{
+  display: flex;
+  }
+  .listedge-list 
+  {
+    width: 270px;
+  &:not(:last-child) 
+  {
+    margin-right: 30px;
+  }
+ 
+}
+.listeadge-img 
+{
+    background-color: var(--bckglisteage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    height: 120px;
+  }
+  .svg-listeage 
+  {
+    display: block;
+    height: 70px;
+    width: 70px;
+  }
+  .listedge-heading 
+  {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 1.17;
+    margin-bottom: 10px;
+  }
+  .listedge-paragraph 
+  {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color:var(--colorparagraphhero);
+  }

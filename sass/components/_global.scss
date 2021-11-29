@@ -1,0 +1,60 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--maincolor);
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    display: block;
+  }
+  .header__link {
+    color: var(--maincolor);
+    text-decoration: none;
+  }
+  
+  .header__link:hover,
+  .header__link:focus {
+    color: var(--bluecolor);
+  }
+  .header__link--current {
+    color: var(--bluecolor);
+    text-decoration: none;
+  }
+  li,
+  .header__list,
+  .header__list-contacts,
+  .listbenefits,
+  .list-team,
+  .listedge,
+  .listprojects {
+    list-style-type: none;
+  }
+  .list-basment {
+    list-style-type: none;
+  }
+  .container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }

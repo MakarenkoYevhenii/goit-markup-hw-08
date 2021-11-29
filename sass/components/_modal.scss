@@ -1,0 +1,218 @@
+.is-hidden
+{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity var(--animation), visibility var(--animation);
+}
+.backdrop
+{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bckgrmodal);
+  z-index: 55000;
+  transition: opacity var(--animation), visibility var(--animation);
+}
+.modal
+{
+  width: 528px;
+  background:  var(--colorofborderteam);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 1px 3px var(--shadow3), 0px 1px 1px var(--shadow4), 0px 2px 1px var(--shadow5);
+  border-radius: 4px;
+}
+.closemark
+{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:var(--whitetext);
+  cursor: pointer;
+  border: 1px solid var(--borderclose);
+
+&:hover,
+&:focus
+{
+  fill: var(--bluecolor);
+}}
+.modaldiv
+{
+  padding: 40px; 
+}
+.modalContent
+{
+  text-align: center;
+  margin-bottom: 12px;
+}
+.rows
+{
+  margin-bottom: 10px;
+  height: 58px;
+    &:last-child
+{
+  margin-bottom: 20px;
+}
+}
+.label,.labelcomments
+{
+font-family: 'Roboto';
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 1.16;
+letter-spacing: 0.01em;
+text-align: left;
+color: var(--colortextform);
+}
+.inputmodal
+{
+  display: block;
+  height: 40px;
+  width: 448px;
+  border: 1px solid var(--bordermodalblack);
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  padding-left: 40px;
+  transition: border-color var(--animation);
+  &:hover,
+  &:focus, 
+  &:focus-visible
+  {
+    outline: 0px;
+    border-color: var(--bordermodal);
+  }
+&:hover + .svg-modal,
+&:focus + .svg-modal,
+&:focus-visible + .svg-modal 
+{
+  fill: var(--bordermodal);
+}
+}
+.svg-modal
+{
+  fill: var(--maincolor);
+  position: relative;
+  top:-30px;
+  left:12px;
+
+}
+.coments
+{
+  height: 138px;
+  margin-bottom: 20px;
+}
+.accept-div
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.checkbox
+{
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.checkbox:checked + .chekbox-accept
+{
+  background: var(--overlaybcg);
+  border-color: var(--overlaybcg);
+  
+}
+.chekbox-accept
+{
+  fill:var(--whitecolor);
+  border: 2px solid var(--maincolor);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background var(--animation),border-color var(--animation);
+}
+.contract--label
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--silvercolor);
+display: flex;
+}
+.text-contract
+{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: var(--silvercolor);
+display: flex;
+}
+.button-send
+{
+  font-style: normal;
+  font-weight: bold;
+  background-color: var(--bluecolor);
+  color: var(--whitetext);
+  font-size: 16px;
+  line-height: 1.8;
+  cursor: pointer;
+  border: 0cm;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px var(--shadow8);
+  height: 50px;
+  width: 200px;
+  margin-left: 125px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  background-color: var(--bordermodal);
+
+  &:hover,
+  &:focus
+{
+  background-color: var(--hoverbutton)
+}}
+.feedback
+{
+  width: 448px;
+  height: 120px;
+  resize: none;
+  border: 1px solid var(--bordermodalblack);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: border-color var(--animation);
+&::placeholder
+{
+  color: var(--colorplaceholder);
+}
+&:hover, 
+&:focus
+{
+  outline: 0px;
+  border-color: var(--bordermodal);
+}
+}
