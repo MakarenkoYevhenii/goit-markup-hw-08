@@ -54,10 +54,15 @@
   }
 }
 .connect-street {
-  margin-bottom: 60px;
+  @include mq(mobile-only){
+  margin-bottom: 60px;}
+ 
 
   @include mq(desktop) {
     margin-right: 70px;
+  }
+  @include mq (desktop){
+    margin-bottom: 0;
   }
 }
 .div-links {
@@ -68,19 +73,21 @@
     margin-left: 150px;
     justify-content: center;
   }
-  @include mq(desktop) {
-    padding: 60px;
-  }
 }
 .basement-wrapper {
+  
   @include mq(tablet) {
     display: flex;
     align-items: baseline;
+    
+  }
+  @include mq (notDesktop)
+  {
+  margin-bottom: 60px;
   }
 }
 .connect-links {
   display: flex;
-  margin-bottom: 60px;
 }
 .connect-links-items {
   margin-right: 10px;
@@ -104,9 +111,6 @@
 .letter {
   font-style: normal;
   margin-top: 20px;
-  @include mq(tablet) {
-    margin-bottom: 60px;
-  }
 }
 .links-items {
   display: flex;
@@ -189,10 +193,11 @@
   font-size: 16px;
   cursor: pointer;
   border: 0cm;
-  border-radius: 10px;
+  border-radius: 4px;
   height: 50px;
   width: 200px;
   margin-left: 12px;
+  padding: 29px 10px;
 }
 .subcribe-svg {
   margin-left: 10px;

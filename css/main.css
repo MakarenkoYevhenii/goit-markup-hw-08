@@ -526,6 +526,8 @@ li,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 
 @media (min-width: 768px) {
@@ -535,8 +537,6 @@ li,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: -30px;
-    margin-bottom: -30px;
   }
 }
 
@@ -1139,13 +1139,21 @@ li,
   }
 }
 
-.connect-street {
-  margin-bottom: 60px;
+@media (max-width: 767.98px) {
+  .connect-street {
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 1280px) {
   .connect-street {
     margin-right: 70px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .connect-street {
+    margin-bottom: 0;
   }
 }
 
@@ -1171,12 +1179,6 @@ li,
   }
 }
 
-@media (min-width: 1280px) {
-  .div-links {
-    padding: 60px;
-  }
-}
-
 @media (min-width: 768px) {
   .basement-wrapper {
     display: -webkit-box;
@@ -1188,11 +1190,16 @@ li,
   }
 }
 
+@media (max-width: 1279.98px) {
+  .basement-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
 .connect-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 60px;
 }
 
 .connect-links-items {
@@ -1218,12 +1225,6 @@ li,
 .letter {
   font-style: normal;
   margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-  .letter {
-    margin-bottom: 60px;
-  }
 }
 
 .links-items {
@@ -1374,10 +1375,11 @@ li,
   font-size: 16px;
   cursor: pointer;
   border: 0cm;
-  border-radius: 10px;
+  border-radius: 4px;
   height: 50px;
   width: 200px;
   margin-left: 12px;
+  padding: 29px 10px;
 }
 
 .subcribe-svg {
