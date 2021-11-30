@@ -150,7 +150,13 @@
   cursor: pointer;
   margin-right: 5px;
   transition: background var(--animation), border-color var(--animation);
+  width: 16px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .contract--label {
   font-family: var(--fontbase);
   font-style: normal;
@@ -159,7 +165,7 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--silvercolor);
-  display: initial;
+  
 }
 .text-contract {
   font-size: 12px;

@@ -63,6 +63,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 h1,
@@ -73,10 +74,6 @@ p,
 ul {
   margin: 0;
   padding: 0;
-}
-
-img {
-  display: block;
 }
 
 a {
@@ -1593,6 +1590,17 @@ li,
   margin-right: 5px;
   -webkit-transition: background var(--animation), border-color var(--animation);
   transition: background var(--animation), border-color var(--animation);
+  width: 16px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contract--label {
@@ -1603,7 +1611,6 @@ li,
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--silvercolor);
-  display: initial;
 }
 
 .text-contract {
