@@ -205,6 +205,7 @@ li,
   padding-bottom: 32px;
   -webkit-transition: color var(--animation);
   transition: color var(--animation);
+  position: relative;
 }
 
 .header__link:hover, .header__link:focus {
@@ -220,11 +221,13 @@ li,
 }
 
 .header__link--current::after {
-  position: relative;
+  position: absolute;
   display: block;
   content: "";
   border: 2px solid;
-  top: 34px;
+  top: 83px;
+  width: 100%;
+  height: 4px;
   border-radius: 2px;
   background-color: var(--overlaybcg);
 }
@@ -363,42 +366,74 @@ li,
   display: block;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/bkghero.jpg);
-  background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/bkghero.jpg);
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/header-mb.jpg);
+  background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/header-mb.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1600px;
-  margin: auto;
   background-color: var(--rockcolor);
   text-align: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-moz-min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/header-mb@2x.jpg);
+    background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/header-mb@2x.jpg);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/header-md.jpg);
+    background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/header-md.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/header-md@2x.jpg);
+    background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/header-md@2x.jpg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/herobg_lg.jpg);
+    background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/herobg_lg.jpg);
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-moz-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--colorbggradient)), to(var(--colorbggradient))), url(../images/background/herobg_lg@2x.jpg);
+    background-image: linear-gradient(var(--colorbggradient), var(--colorbggradient)), url(../images/background/herobg_lg@2x.jpg);
+  }
 }
 
 .hero-button {
   background-color: var(--bluecolor);
   color: var(--whitetext);
   font-size: 16px;
+  line-height: 1.8;
   cursor: pointer;
   font-weight: 700;
   border: 0cm;
   border-radius: 10px;
-  max-width: 200px;
-  height: 50px;
+  padding: 10px 32px;
+  min-width: 200px;
 }
 
 .hero-text {
   color: var(--whitetext);
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   font-weight: 900;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-}
-
-.container-flex-hero {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 696px;
+  max-width: 360px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .section-benefits {
@@ -491,8 +526,6 @@ li,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -505,6 +538,8 @@ li,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-right: -30px;
+    margin-bottom: -30px;
   }
 }
 
@@ -532,12 +567,21 @@ li,
   transition: border-color var(--animation);
   margin-bottom: 30px;
   margin-right: 30px;
-  width: 210px;
+  -ms-flex-preferred-size: calc((100% - 60px) / 2);
+      flex-basis: calc((100% - 60px) / 2);
+}
+
+@media (min-width: 768px) {
+  .customers-item {
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
 }
 
 @media (min-width: 1280px) {
   .customers-item {
-    width: 270px;
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
   }
 }
 
@@ -567,8 +611,6 @@ li,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 92px;
-  width: 170px;
 }
 
 @media (min-width: 768px) {
@@ -858,8 +900,8 @@ li,
   .listprojects-item {
     margin-bottom: 30px;
     margin-right: 30px;
-    -ms-flex-preferred-size: calc((100% - 90px) / 2);
-        flex-basis: calc((100% - 90px) / 2);
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
   }
 }
 
@@ -876,8 +918,8 @@ li,
   }
 }
 
-.listprojects-item:hover .overlay,
-.listprojects-item:focus .overlay {
+.projects-url:hover .overlay,
+.projects-url:focus .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1100,6 +1142,10 @@ li,
   }
 }
 
+.connect-street {
+  margin-bottom: 60px;
+}
+
 @media (min-width: 1280px) {
   .connect-street {
     margin-right: 70px;
@@ -1117,13 +1163,39 @@ li,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 60px;
+}
+
+@media (min-width: 768px) and (max-width: 1279.98px) {
+  .div-links {
+    margin-left: 150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1280px) {
+  .div-links {
+    padding: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .basement-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .connect-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 60px;
 }
 
 .connect-links-items {
@@ -1188,6 +1260,12 @@ li,
 @media (min-width: 1280px) {
   .subscribe {
     margin-left: 93px;
+  }
+}
+
+@media (min-width: 768px) {
+  .subscribe {
+    width: 450px;
   }
 }
 
@@ -1346,7 +1424,8 @@ li,
 }
 
 .modal {
-  width: 450px;
+  width: 100%;
+  max-width: 528px;
   background: var(--colorofborderteam);
   position: absolute;
   top: 50%;
@@ -1356,12 +1435,6 @@ li,
   -webkit-box-shadow: 0px 1px 3px var(--shadow3), 0px 1px 1px var(--shadow4), 0px 2px 1px var(--shadow5);
           box-shadow: 0px 1px 3px var(--shadow3), 0px 1px 1px var(--shadow4), 0px 2px 1px var(--shadow5);
   border-radius: 4px;
-}
-
-@media (min-width: 1280px) {
-  .modal {
-    width: 528px;
-  }
 }
 
 .closemark {
@@ -1577,6 +1650,7 @@ li,
   font-weight: bold;
   letter-spacing: 0.06em;
   background-color: var(--bordermodal);
+  margin-top: 30px;
 }
 
 .button-send:hover, .button-send:focus {

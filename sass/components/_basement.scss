@@ -19,8 +19,7 @@
   color: var(--whitetext);
   font-size: 26px;
 
-    margin-bottom: 20px;
-
+  margin-bottom: 20px;
 }
 .emblema-basment:hover,
 .emblema-basment:focus {
@@ -42,9 +41,8 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  
-  @include mq(tablet)
-  {
+
+  @include mq(tablet) {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
@@ -56,19 +54,33 @@
   }
 }
 .connect-street {
+  margin-bottom: 60px;
+
   @include mq(desktop) {
     margin-right: 70px;
   }
 }
-.div-links
-{
+.div-links {
   align-items: center;
   display: flex;
-    flex-direction: column; 
-    margin:60px;
+  flex-direction: column;
+  @include mq(tablet-only) {
+    margin-left: 150px;
+    justify-content: center;
+  }
+  @include mq(desktop) {
+    padding: 60px;
+  }
+}
+.basement-wrapper {
+  @include mq(tablet) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 .connect-links {
   display: flex;
+  margin-bottom: 60px;
 }
 .connect-links-items {
   margin-right: 10px;
@@ -92,8 +104,7 @@
 .letter {
   font-style: normal;
   margin-top: 20px;
-  @include mq(tablet)
-  {
+  @include mq(tablet) {
     margin-bottom: 60px;
   }
 }
@@ -119,9 +130,11 @@
 }
 
 .subscribe {
-@include mq(desktop) 
-   {
+  @include mq(desktop) {
     margin-left: 93px;
+  }
+  @include mq(tablet) {
+    width: 450px;
   }
 }
 .subscribep {
@@ -139,8 +152,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include mq(desktop)
-  {
+  @include mq(desktop) {
     flex-direction: row;
     align-items: baseline;
   }
