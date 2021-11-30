@@ -58,6 +58,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 img {
@@ -436,6 +437,7 @@ li,
 @media (min-width: 1280px) {
   .hero-text {
     font-size: 44px;
+    max-width: 696px;
   }
 }
 
@@ -532,7 +534,6 @@ li,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: -30px;
   margin-bottom: -30px;
 }
 
@@ -543,6 +544,7 @@ li,
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-right: -30px;
   }
 }
 
@@ -572,6 +574,12 @@ li,
   margin-right: 30px;
   -ms-flex-preferred-size: calc((100% - 60px) / 2);
       flex-basis: calc((100% - 60px) / 2);
+}
+
+@media (max-width: 767.98px) {
+  .customers-item:nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 768px) {
