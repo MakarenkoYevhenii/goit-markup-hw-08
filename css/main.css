@@ -433,6 +433,12 @@ li,
   margin-bottom: 30px;
 }
 
+@media (min-width: 1280px) {
+  .hero-text {
+    font-size: 44px;
+  }
+}
+
 .section-benefits {
   padding-top: 0px;
 }

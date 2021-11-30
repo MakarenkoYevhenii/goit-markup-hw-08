@@ -52,6 +52,10 @@
     max-width: 360px;
     margin: 0 auto;
     margin-bottom: 30px;
+    @include mq (desktop)
+    {
+      font-size:44px;;
+    }
     
     }}
     // .container-flex-hero {
