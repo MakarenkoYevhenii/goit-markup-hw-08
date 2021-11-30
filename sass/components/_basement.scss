@@ -1,67 +1,84 @@
 .basment {
-    background-color: var(--rockcolor);
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .web-basment {
-    color: var(--bluecolor);
-  }
-  .list-basment {
-    list-style-type: none;
-  }
-  .list-basment > li:not(:first-child) {
-    margin-top: 9px;
-  }
-  .emblema-basment {
-    font-weight: bold;
-    font-family: var(--fontsecondary);
-    text-decoration: none;
-    color: var(--whitetext);
-    font-size: 26px;
-  }
-  .emblema-basment:hover,
-  .emblema-basment:focus
-  {
-    color: var(--whitetext);
-  }
+  background-color: var(--rockcolor);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.web-basment {
+  color: var(--bluecolor);
+}
+.list-basment {
+  list-style-type: none;
+}
+.list-basment > li:not(:first-child) {
+  margin-top: 9px;
+}
+.emblema-basment {
+  font-weight: bold;
+  font-family: var(--fontsecondary);
+  text-decoration: none;
+  color: var(--whitetext);
+  font-size: 26px;
+
+    margin-bottom: 20px;
+
+}
+.emblema-basment:hover,
+.emblema-basment:focus {
+  color: var(--whitetext);
+}
 .contacts-basment {
   color: var(--whitesix);
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
   transition: color var(--animation);
-    &:hover,
-    &:focus 
-    {
-  color: var(--bluecolor);
-    }
-
-}  
-.connect
-{
+  &:hover,
+  &:focus {
+    color: var(--bluecolor);
+  }
+}
+.connect {
   display: flex;
-align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+  @include mq(tablet)
+  {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  @include mq(desktop) {
+    text-align: start;
+    align-items: baseline;
+  }
 }
-.connect-street
-{
-  margin-right: 70px;
+.connect-street {
+  @include mq(desktop) {
+    margin-right: 70px;
+  }
 }
-.connect-links
+.div-links
 {
+  align-items: center;
+  display: flex;
+    flex-direction: column; 
+    margin:60px;
+}
+.connect-links {
   display: flex;
 }
-.connect-links-items
-{
+.connect-links-items {
   margin-right: 10px;
 
-&:last-child
-{
-  margin-right: 0;
-}}
+  &:last-child {
+    margin-right: 0;
+  }
+}
 
-.connect-heading
-{
-
+.connect-heading {
   color: var(--whitetext);
   font-family: var(--fontbase);
   font-style: normal;
@@ -73,79 +90,86 @@ align-items: baseline;
   margin-bottom: 20px;
 }
 .letter {
-    font-style: normal;
-    margin-top: 20px;
+  font-style: normal;
+  margin-top: 20px;
+  @include mq(tablet)
+  {
+    margin-bottom: 60px;
   }
-  .links-items {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--colorsocialbg);
-    border-radius: 50%;
-    transition: background-color var(--animation);
+}
+.links-items {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--colorsocialbg);
+  border-radius: 50%;
+  transition: background-color var(--animation);
 
   &:hover,
-  &:focus
-  {
+  &:focus {
     border-color: var(--bordercclientshover);
-    background-color: var(--bordercclientshover);    
+    background-color: var(--bordercclientshover);
   }
-    &:hover .svg,
-    &:focus .svg
-{
-  fill:var(--whitecolor); 
-}}
+  &:hover .svg,
+  &:focus .svg {
+    fill: var(--whitecolor);
+  }
+}
 
-.subscribe
-{
-  margin-left: 93px;
+.subscribe {
+@include mq(desktop) 
+   {
+    margin-left: 93px;
+  }
 }
-.subscribep
-{
-font-family: var(--fontbase);
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 1,14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--whitetext);
-margin-bottom: 20px;
-}
-.subscriber-emeil
-{
-  display: flex;
-}
-.emailinput
-{
-width: 358px;
-height: 50px; 
-background-color: var(--bcgsubscribe);
-border: 1px solid var(--bordersubscribe);
-box-sizing: border-box;
-filter: drop-shadow(0px 4px 4px var(--shadow8));
-border-radius: 4px;
-position: relative;
-color:var(--whitecolor);
-padding-left: 16px;
-
-&::placeholder
-{
+.subscribep {
   font-family: var(--fontbase);
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 1,25;
-letter-spacing: 0.03em;
-text-align: left;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1, 14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--whitetext);
+  margin-bottom: 20px;
+}
+.subscriber-emeil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mq(desktop)
+  {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+.emailinput {
+  width: 100%;
+  height: 50px;
+  background-color: var(--bcgsubscribe);
+  border: 1px solid var(--bordersubscribe);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px var(--shadow8));
+  border-radius: 4px;
+  position: relative;
+  color: var(--whitecolor);
+  padding-left: 16px;
+  margin-bottom: 20px;
 
+  &::placeholder {
+    font-family: var(--fontbase);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1, 25;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
 }
-}
-.subscribe-button
-{
-  display:inline-flex;
+.subscribe-button {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: var(--bluecolor);
@@ -158,8 +182,7 @@ text-align: left;
   width: 200px;
   margin-left: 12px;
 }
-.subcribe-svg
-{
+.subcribe-svg {
   margin-left: 10px;
 }
 .street {
@@ -174,5 +197,5 @@ text-align: left;
   display: block;
   height: 20px;
   width: 20px;
-  fill:var(--colorlogoitem);
+  fill: var(--colorlogoitem);
 }
