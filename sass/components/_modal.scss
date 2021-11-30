@@ -1,34 +1,34 @@
-.is-hidden
-{
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
   transition: opacity var(--animation), visibility var(--animation);
 }
-.backdrop
-{
+.backdrop {
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--bckgrmodal);
   z-index: 55000;
   transition: opacity var(--animation), visibility var(--animation);
 }
-.modal
-{
-  width: 528px;
-  background:  var(--colorofborderteam);
+.modal {
+  width: 450px;
+  background: var(--colorofborderteam);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 0px 1px 3px var(--shadow3), 0px 1px 1px var(--shadow4), 0px 2px 1px var(--shadow5);
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 1px 3px var(--shadow3), 0px 1px 1px var(--shadow4),
+    0px 2px 1px var(--shadow5);
   border-radius: 4px;
+  @include mq(desktop) {
+    width: 528px;
+  }
 }
-.closemark
-{
+.closemark {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -38,55 +38,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:var(--whitetext);
+  background-color: var(--whitetext);
   cursor: pointer;
   border: 1px solid var(--borderclose);
 
-&:hover,
-&:focus
-{
-  fill: var(--bluecolor);
+  &:hover,
+  &:focus {
+    fill: var(--bluecolor);
+  }
+  &-menu {
+    background-color: transparent;
+    border: none;
+  }
 }
-&-menu
-{
- background-color: transparent;
- border: none;
+.modaldiv {
+  padding: 40px;
 }
-}
-.modaldiv
-{
-  padding: 40px; 
-}
-.modalContent
-{
+.modalContent {
   text-align: center;
   margin-bottom: 12px;
 }
-.rows
-{
+.rows {
   margin-bottom: 10px;
   height: 58px;
-    &:last-child
-{
-  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
+.label,
+.labelcomments {
+  font-family: var(--fontbase);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--colortextform);
+
+  &:hover,
+  &:focus,
+  &:focus-visible
+  {
+    color: var(--bluecolor);
+  }
 }
-.label,.labelcomments
-{
-font-family: var(--fontbase);
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.16;
-letter-spacing: 0.01em;
-text-align: left;
-color: var(--colortextform);
-}
-.inputmodal
-{
+.inputmodal {
   display: block;
   height: 40px;
-  width: 448px;
+  width: 100%;
   border: 1px solid var(--bordermodalblack);
   box-sizing: border-box;
   border-radius: 4px;
@@ -94,41 +94,41 @@ color: var(--colortextform);
   padding-left: 40px;
   transition: border-color var(--animation);
   &:hover,
-  &:focus, 
-  &:focus-visible
-  {
+  &:focus,
+  &:focus-visible {
     outline: 0px;
     border-color: var(--bordermodal);
   }
-&:hover + .svg-modal,
-&:focus + .svg-modal,
-&:focus-visible + .svg-modal 
-{
-  fill: var(--bordermodal);
-}
-}
-.svg-modal
-{
+  &:hover + .svg-modal,
+  &:focus + .svg-modal,
+  &:focus-visible + .svg-modal {
+    fill: var(--bordermodal);
+  }}
+  .label:hover,
+  .label:focus,
+  .label:focus-visible  {
+    color: var(--bordermodal);
+  }
+.svg-modal {
   fill: var(--maincolor);
   position: relative;
-  top:-30px;
-  left:12px;
-
+  top: -30px;
+  left: 12px;
 }
-.coments
-{
+.coments {
   height: 138px;
   margin-bottom: 20px;
 }
-.accept-div
-{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
+.accept-div {
+  display: inline;
+  @include mq(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
-.checkbox
-{
+.checkbox {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -140,45 +140,52 @@ color: var(--colortextform);
   clip-path: inset(50%);
   margin: -1px;
 }
-.checkbox:checked + .chekbox-accept
-{
+.checkbox:checked + .chekbox-accept {
   background: var(--overlaybcg);
   border-color: var(--overlaybcg);
-  
 }
-.chekbox-accept
-{
-  fill:var(--whitecolor);
+.chekbox-accept {
+  fill: var(--whitecolor);
   border: 2px solid var(--maincolor);
   border-radius: 2px;
   cursor: pointer;
   margin-right: 5px;
-  transition: background var(--animation),border-color var(--animation);
+  transition: background var(--animation), border-color var(--animation);
 }
-.contract--label
-{
-font-family: var(--fontbase);
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: var(--silvercolor);
-display: flex;
+.contract--label {
+  font-family: var(--fontbase);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--silvercolor);
+  display: initial;
 }
-.text-contract
-{
-font-family: var(--fontbase);
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
-color: var(--silvercolor);
-display: flex;
+.text-contract {
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.03em;
+  font-family: var(--fontbase);
+  font-style: normal;
+  font-weight: normal;
+
+  color: var(--silvercolor);
+  display: contents;
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
-.button-send
-{
+.contract {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+.button-send {
+  display: block;
   font-style: normal;
   font-weight: bold;
   background-color: var(--bluecolor);
@@ -191,19 +198,18 @@ display: flex;
   box-shadow: 0px 4px 4px var(--shadow8);
   height: 50px;
   width: 200px;
-  margin-left: 125px;
+  margin: 0 auto;
   font-weight: bold;
   letter-spacing: 0.06em;
   background-color: var(--bordermodal);
 
   &:hover,
-  &:focus
-{
-  background-color: var(--hoverbutton)
-}}
-.feedback
-{
-  width: 448px;
+  &:focus {
+    background-color: var(--hoverbutton);
+  }
+}
+.feedback {
+  width: 100%;
   height: 120px;
   resize: none;
   border: 1px solid var(--bordermodalblack);
@@ -211,14 +217,12 @@ display: flex;
   border-radius: 4px;
   padding: 12px 16px;
   transition: border-color var(--animation);
-&::placeholder
-{
-  color: var(--colorplaceholder);
-}
-&:hover, 
-&:focus
-{
-  outline: 0px;
-  border-color: var(--bordermodal);
-}
+  &::placeholder {
+    color: var(--colorplaceholder);
+  }
+  &:hover,
+  &:focus {
+    outline: 0px;
+    border-color: var(--bordermodal);
+  }
 }
